@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="sublime text3," />
+  <meta name="keywords" content="开发工具," />
 
 
 
@@ -91,7 +91,7 @@
 <meta property="og:site_name" content="elegantspirit">
 <meta property="og:description" content="对于从事前端开发的小伙伴们来说，去控制台测试一下程序的输入输出是经常之事。多数情况下，我们会借助于 F12 这个功能。但对于一些小的 demo 和程序输出测试，使用 F12 难免会觉着有一些麻烦(对于 programmer 来说，一步能解决的事情，绝对不走第二步)。　　webstorm这种 IDE 自不必说，atom 的 community packages 里面有 script 软件包，su">
 <meta property="og:image" content="http://www.huweichang.com/imgs/console.png">
-<meta property="og:updated_time" content="2017-02-05T10:07:46.850Z">
+<meta property="og:updated_time" content="2017-02-05T10:11:07.484Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="sublime text3 中安装JavaScript控制台">
 <meta name="twitter:description" content="对于从事前端开发的小伙伴们来说，去控制台测试一下程序的输入输出是经常之事。多数情况下，我们会借助于 F12 这个功能。但对于一些小的 demo 和程序输出测试，使用 F12 难免会觉着有一些麻烦(对于 programmer 来说，一步能解决的事情，绝对不走第二步)。　　webstorm这种 IDE 自不必说，atom 的 community packages 里面有 script 软件包，su">
@@ -292,6 +292,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/sublime/" itemprop="url" rel="index">
+                    <span itemprop="name">sublime</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -319,7 +341,7 @@
       
         <p>　　对于从事前端开发的小伙伴们来说，去控制台测试一下程序的输入输出是经常之事。多数情况下，我们会借助于 F12 这个功能。但对于一些小的 demo 和程序输出测试，使用 F12 难免会觉着有一些麻烦(对于 programmer 来说，一步能解决的事情，绝对不走第二步)。<br>　　webstorm这种 IDE 自不必说，atom 的 community packages 里面有 script 软件包，sublime 呢？<a id="more"></a><br>　　sublime 需要通过自身的 Build System 方法来让自身支持 JavaScript 控制台测试，安装步骤如下：<br>　　1. 安装<a href="https://nodejs.org/en/download/" target="_blank" rel="external">nodeJs</a>, <code>win+r</code> 打开cmd，中输入 <code>node -v</code> ，查看 node 是否被正确安装，如果出现版本号，则安装成功。<br>　　2. 打开，sublime text3，依次点开 <code>tools -&gt; build system -&gt; new build system</code>，将下面的代码写入，保存为 JavaScript.sublime-build，保存位置默认即可。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="string">"cmd"</span>: [<span class="string">"node"</span>, <span class="string">"$file"</span>],</div><div class="line">    <span class="string">"file_regex"</span>: <span class="string">"^[ ]*File \"(...*?)\", line ([0-9]*)"</span>,</div><div class="line">    <span class="string">"working_dir"</span>: <span class="string">"$&#123;project_path:$&#123;folder&#125;&#125;"</span>,</div><div class="line">    <span class="string">"selector"</span>: <span class="string">"source.js"</span>,</div><div class="line">    <span class="string">"shell"</span>: <span class="literal">true</span>,</div><div class="line">    <span class="string">"encoding"</span>: <span class="string">"utf-8"</span>,</div><div class="line">    <span class="string">"windows"</span>: &#123;</div><div class="line">        <span class="string">"cmd"</span>: [<span class="string">"node"</span>, <span class="string">"$file"</span>]</div><div class="line">    &#125;,</div><div class="line">    <span class="string">"linux"</span>: &#123;</div><div class="line">        <span class="string">"cmd"</span>: [<span class="string">"killall node; node"</span>, <span class="string">"$file"</span>]</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>&emsp;&emsp;接下来，让我们来新建一个 JS 文件，测试一下这个编译系统是否被正确安装：  </p>
+<p>&emsp;&emsp;接下来，让我们来新建一个 JS 文件，测试一下这个编译系统是否被正确安装,按下 F7：  </p>
 <p><img src="/imgs/console.png" alt="test"></p>
 <p>&emsp;&emsp; OK啦！</p>
 
@@ -345,7 +367,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/sublime-text3/" rel="tag"># sublime text3</a>
+            <a href="/tags/开发工具/" rel="tag"># 开发工具</a>
           
         </div>
       
@@ -432,7 +454,7 @@
           
             <div class="site-state-item site-state-categories">
               
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
               
             </div>
